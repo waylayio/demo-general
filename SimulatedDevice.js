@@ -30,7 +30,6 @@ setInterval(function(){
   // Simulate telemetry.
   var temperature = 20 + (Math.random() * 15);
   var message = new Message(JSON.stringify({
-    resource: "testAzureDeviceTVL",
     temperature: temperature,
     humidity: 60 + (Math.random() * 20)
   }));
