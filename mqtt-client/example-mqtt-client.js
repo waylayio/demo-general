@@ -11,7 +11,7 @@ const mqttOptions = {
 }
 
 const publishAcl = ''
-const payload = 'test'
+const payload = JSON.stringify({ resource: 'resourceName', metricName: 'metric value' })
 
 async function connectToMQTTClient () {
   const mqttClient = await mqtt.connect(mqttEndpoint, mqttOptions)
