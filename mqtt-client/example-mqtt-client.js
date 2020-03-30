@@ -1,13 +1,13 @@
 const mqtt = require('async-mqtt')
 
-const mqttEndpoint = 'mqtts://mqtt.waylay.io'
+const mqttEndpoint = 'mqtts://mqtt-staging.waylay.io'
 
 // fill in the empty fields by following the steps in the documentation: https://docs.waylay.io/features/mqtt_broker_manager/
 const mqttOptions = {
   'clientId': '',
   'username': '',
   'password': '',
-  'port': ''
+  'port': '8883'
 }
 
 const publishAcl = ''
@@ -18,18 +18,19 @@ async function connectToMQTTClient () {
 
   mqttClient.on('connect', () => {
     console.log('Connected to mqtt client')
-    return mqttClient
+    examplePublish(publishAcl, payload, mqttClient)
   })
 }
 
-async function examplePublish (publishAcl, payload) {
-  const mqttClient = connectToMQTTClient()
+async function examplePublish (publishAcl, payload, mqttClient) {
   try {
     await mqttClient.publish(publishAcl, payload)
+    console.log('Payload published')
     await mqttClient.end()
+    console.log('Client closed')
   } catch (e) {
     console.log(e.stack)
   }
 }
 
-examplePublish(publishAcl, payload)
+connectToMQTTClient()
