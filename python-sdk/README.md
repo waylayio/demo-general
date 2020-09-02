@@ -13,9 +13,22 @@ This SDK is currently in beta. This implies that any subsequent version can intr
 
 # Installation
 
-The SDK is optimised for usage in [Jupyter Python Notebooks](https://jupyter.org/). 
+The Waylay Python SDK is available as [waylay-beta in PyPi library repository](https://pypi.org/project/waylay-beta/).
+Hence installation in a python environment (`3.6+`) just requires:
 
-This is how you would install the SDK and interact with the examples in a [Anaconda](https://www.anaconda.com/) environment.
+```
+pip install waylay-beta
+```
+
+This will install (or use) all required dependencies such as 
+[Pandas](https://pandas.pydata.org/pandas-docs/stable/index.html)
+but not any specific data science libraries such as [scikit-learn](https://scikit-learn.org/stable/install.html).
+
+## Using Anaconda and Jupyter notebooks
+The SDK is optimised for usage in [Jupyter Python Notebooks](https://jupyter.org/), as illustrated in this repository.
+
+This is how you would install the SDK and interact with the examples in a [Anaconda](https://www.anaconda.com/) 
+or [Miniconda](https://docs.conda.io/en/latest/miniconda.html) environment.
 
 ```bash
 # clone this repository
@@ -110,20 +123,20 @@ waylay_client.byoml.model.list_names()
       <th>data</th>
       <td>GET</td>
       <td>/data/query/{}</td>
-      <td>Execute the time series query specified by the named <em>Query Configuration</em></td>
+      <td>Execute the timeseries query specified by the named <em>Query Configuration</em></td>
     </tr>
     <tr>
       <th>execute</th>
       <td>POST</td>
       <td>/data/query</td>
-      <td>Execute the time series query specified in the request</td>
+      <td>Execute the timeseries query specified in the request</td>
     </tr>
     <tr>
       <th>about</th>
       <th>version</th>
       <td>GET</td>
       <td>/</td>
-      <td>Version info of the <em>Analytics Service</em></td>
+      <td>Version info of the <em>Analytics Service</em> at this endpoint.</td>
     </tr>
     <tr>
       <th rowspan="11" valign="top">byoml</th>
@@ -188,8 +201,8 @@ waylay_client.byoml.model.list_names()
       <td>Remove the named <em>BYOML Model</em></td>
     </tr>
     <tr>
-      <th>status</th>
-      <th>get</th>
+      <th>about</th>
+      <th>health</th>
       <td>GET</td>
       <td>/</td>
       <td>Get the health status of the <em>BYOML Service</em></td>
