@@ -6,14 +6,14 @@ The main documentation can be found at the [Waylay Documentation Site](https://d
 
 The current scope of the SDK is to support Data Science activities
 as provided by the services
-* [BYOML](/features/byoml/)  (Models)
-* [Time Series Analytics](/features/tsanalytics/) (Query Configurations)
+* [BYOML](https://docs.waylay.io/features/byoml/)  (Models)
+* [Time Series Analytics](https://docs.waylay.io/features/tsanalytics/) (Query Configurations)
 
 This SDK is currently in beta. This implies that any subsequent version can introduce breaking changes.
 
 # Installation
 
-The Waylay Python SDK is available as [waylay-beta in PyPi library repository](https://pypi.org/project/waylay-beta/).
+The Waylay Python SDK is available as [waylay-beta in the PyPi library repository](https://pypi.org/project/waylay-beta/).
 Hence installation in a python environment (`3.6+`) just requires:
 
 ```
@@ -46,7 +46,7 @@ conda install jupyter
 pip install waylay-beta
 
 # install any additional tools you might need
-# pip install sklearn
+# pip install scikit-learn
 
 # start a notebook server (this will open a browser)
 jupyter notebook
