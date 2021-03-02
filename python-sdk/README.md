@@ -4,10 +4,10 @@ This section contains reference usage examples for the [Waylay Python SDK (beta)
 
 The main documentation can be found at the [Waylay Documentation Site](https://docs.waylay.io/api/sdk/python).
 
-The current scope of the SDK is to support Data Science activities
-as provided by the services
-* [BYOML](https://docs.waylay.io/features/byoml/)  (Models)
-* [Time Series Analytics](https://docs.waylay.io/features/tsanalytics/) (Query Configurations)
+The current scope of the SDK is to support Data Science activities as provided by the services
+* [BYOML](http://docs-io.waylay.io/#/features/byoml/)  (Machine Learning)
+* [Time Series Query](http://docs-io.waylay.io/#/features/query/)
+* [ETL Import](http://docs-io.waylay.io/#/features/etl/?id=etl-import-service)
 
 This SDK is currently in beta. This implies that any subsequent version can introduce breaking changes.
 
@@ -56,14 +56,13 @@ jupyter notebook
 
 # API Documentation
 
-Detailed documentation will be provided soon. Below is an abriged overview of the currently exposed api.
+Below is an abriged overview of the currently exposed api.
 Each of the `service`.`resource`.`action` combinations correspond with a method of the Waylay Client.
 ```python
 from waylay import WaylayClient
 waylay_client = WaylayClient.from_profile()
 
 # example WaylayClient.<service>.<resource>.<action> method
-
 waylay_client.byoml.model.list_names()
 ```
 
