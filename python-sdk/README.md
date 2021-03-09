@@ -61,6 +61,12 @@ Example notebooks are available for the following categories
 * [query](query/) define and execute time series queries
 * [etl_import](etl_import/) bulk import your csv files and pandas dataframes into Waylay
 
+## Plotting
+Some of the demo notebooks uses the [pandas basic plotting](https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html#basic-plotting-plot)
+integration. This will require the additional dependency
+```
+pip install matplotlib
+```
 
 # API Documentation
 
