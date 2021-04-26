@@ -1,0 +1,11 @@
+name: byoml_sklearn
+channels:
+  - conda-forge
+dependencies:
+  - python=3.7
+  - scikit-learn=0.22
+  - seaborn
+  - pandas
+  - jupyter
+  - tenacity
+  - dill

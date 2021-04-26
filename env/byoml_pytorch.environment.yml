@@ -1,0 +1,10 @@
+name: byoml_pytorch
+channels:
+  - conda-forge
+dependencies:
+  - python=3.7
+  - pytorch<1.6
+  - seaborn
+  - pandas
+  - jupyter
+  - tenacity
