@@ -4,5 +4,5 @@ This repository contains a number of technology demonstration for the Waylay Pla
 organized along a number of verticals:
 
 * [energy](energy)
-  * [HVAC occupancy detection](hvac-occupancy-detection)
+  * [HVAC occupancy detection](energy/hvac-occupancy-detection)
   
