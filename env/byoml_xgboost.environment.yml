@@ -1,0 +1,10 @@
+name: byoml_xgboost
+channels:
+  - conda-forge
+dependencies:
+  - python=3.7
+  - xgboost<1.1
+  - pandas
+  - jupyter
+  - tenacity
+  - seaborn

@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+
+CONDA_ENV=${1:-$CONDA_ENV}
+
+eval "$(conda shell.bash hook)"
+echo "creating conda environment '$CONDA_ENV'"
+conda env create --file env/${CONDA_ENV}.environment.yml
+conda activate ${CONDA_ENV}
+pip install -r env/${CONDA_ENV}.requirements.txt
