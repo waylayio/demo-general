@@ -8,4 +8,4 @@ dependencies:
   - pandas
   - jupyter
   - tenacity
-  - dill
+  - dill=0.3.3
