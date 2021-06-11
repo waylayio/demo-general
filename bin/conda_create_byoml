@@ -3,4 +3,4 @@
 $(dirname $0)/conda_create byoml_sklearn
 $(dirname $0)/conda_create byoml_tensorflow
 $(dirname $0)/conda_create byoml_xgboost
-$(dirname $0)/conda_create byoml_sklearn
+$(dirname $0)/conda_create byoml_pytorch
