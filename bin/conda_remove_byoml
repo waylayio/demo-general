@@ -3,4 +3,4 @@
 $(dirname $0)/conda_remove byoml_sklearn
 $(dirname $0)/conda_remove byoml_tensorflow
 $(dirname $0)/conda_remove byoml_xgboost
-$(dirname $0)/conda_remove byoml_sklearn
+$(dirname $0)/conda_remove byoml_pytorch
