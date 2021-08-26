@@ -1,9 +1,12 @@
 #!/bin/bash
 set -e
-CONDA_ENV=${1:-$CONDA_ENV}
+
+CONDA_ENV_DIR=${1:-env/$CONDA_ENV}
+CONDA_ENV=$(basename -- $CONDA_ENV_DIR)
+
 NOTEBOOK=$2
 BIN_DIR=$(dirname $0)
 
 eval "$(conda shell.bash hook)"
-conda activate $CONDA_ENV || source ${BIN_DIR}/conda_create $CONDA_ENV
+conda activate $CONDA_ENV || source ${BIN_DIR}/conda_create $CONDA_ENV_DIR
 jupyter notebook $NOTEBOOK

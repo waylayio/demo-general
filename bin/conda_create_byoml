@@ -1,6 +1,6 @@
 #!/bin/bash
 
-$(dirname $0)/conda_create byoml_sklearn
-$(dirname $0)/conda_create byoml_tensorflow
-$(dirname $0)/conda_create byoml_xgboost
-$(dirname $0)/conda_create byoml_pytorch
+$(dirname $0)/conda_create env/byoml_sklearn
+$(dirname $0)/conda_create env/byoml_tensorflow
+$(dirname $0)/conda_create env/byoml_xgboost
+$(dirname $0)/conda_create env/byoml_pytorch

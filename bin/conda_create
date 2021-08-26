@@ -1,10 +1,11 @@
 #!/bin/bash
 set -e
 
-CONDA_ENV=${1:-$CONDA_ENV}
+CONDA_ENV_DIR=${1:-env/$CONDA_ENV}
+CONDA_ENV=$(basename -- $CONDA_ENV_DIR)
 
 eval "$(conda shell.bash hook)"
 echo "creating conda environment '$CONDA_ENV'"
-conda env create --file env/${CONDA_ENV}.environment.yml
-conda activate ${CONDA_ENV}
-pip install -r env/${CONDA_ENV}.requirements.txt
+conda env create --file ${CONDA_ENV_DIR}/environment.yml 
+conda activate $(basename -- $CONDA_ENV)
+pip install -r ${CONDA_ENV_DIR}/requirements.txt
