@@ -1,6 +1,8 @@
 #!/bin/bash
 
-$(dirname $0)/conda_remove byoml_sklearn
-$(dirname $0)/conda_remove byoml_tensorflow
-$(dirname $0)/conda_remove byoml_xgboost
-$(dirname $0)/conda_remove byoml_pytorch
+BIN_DIR=$(dirname $0)
+CONDA_ENV_DIR=${BIN_DIR}/../env
+${BIN_DIR}/conda_remove ${CONDA_ENV_DIR}/byoml_sklearn
+${BIN_DIR}/conda_remove ${CONDA_ENV_DIR}/byoml_tensorflow
+${BIN_DIR}/conda_remove ${CONDA_ENV_DIR}/byoml_xgboost
+${BIN_DIR}/conda_remove ${CONDA_ENV_DIR}/byoml_pytorch

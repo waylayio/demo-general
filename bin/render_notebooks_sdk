@@ -1,7 +1,8 @@
 #!/bin/bash
 
-BIN_DIR=$(dirname $0)/../bin
 NB_DIR=$(dirname $0)/..
+BIN_DIR=${NB_DIR}/bin
+ENV_DIR=${NB_DIR}/env
 
-${BIN_DIR}/render_notebook byoml_tensorflow ${NB_DIR}/python-sdk/general/retries.ipynb
+${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_tensorflow ${NB_DIR}/python-sdk/general/retries.ipynb
 # TODO add other sdk notebooks ...
