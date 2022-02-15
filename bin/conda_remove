@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
 
-CONDA_ENV=${1:-$CONDA_ENV}
+CONDA_ENV_DIR=${1:-env/$CONDA_ENV}
+CONDA_ENV=$(basename -- $CONDA_ENV_DIR)
 
 eval "$(conda shell.bash hook)"
 echo "removing conda environment '$CONDA_ENV'"

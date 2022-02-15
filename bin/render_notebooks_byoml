@@ -1,11 +1,12 @@
 #!/bin/bash
 
-BIN_DIR=$(dirname $0)/../bin
 NB_DIR=$(dirname $0)/..
+BIN_DIR=${NB_DIR}/bin
+ENV_DIR=${NB_DIR}/env
 
-${BIN_DIR}/render_notebook byoml_sklearn ${NB_DIR}/byoml/tutorial.ipynb
-${BIN_DIR}/render_notebook byoml_sklearn ${NB_DIR}/byoml/sklearnCustom.ipynb
-${BIN_DIR}/render_notebook byoml_tensorflow ${NB_DIR}/byoml/tensorflow.ipynb
-${BIN_DIR}/render_notebook byoml_xgboost ${NB_DIR}/byoml/xgBoost.ipynb
-${BIN_DIR}/render_notebook byoml_pytorch ${NB_DIR}/byoml/pyTorch.ipynb
-# ${BIN_DIR}/render_notebook byoml_tensorflow ${NB_DIR}/python-sdk/general/retries.ipynb
+${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_sklearn ${NB_DIR}/byoml/tutorial.ipynb
+${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_sklearn ${NB_DIR}/byoml/sklearnCustom.ipynb
+${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_tensorflow ${NB_DIR}/byoml/tensorflow.ipynb
+${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_xgboost ${NB_DIR}/byoml/xgBoost.ipynb
+${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_pytorch ${NB_DIR}/byoml/pyTorch.ipynb
+# ${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_tensorflow ${NB_DIR}/python-sdk/general/retries.ipynb
