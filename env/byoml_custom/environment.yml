@@ -1,0 +1,7 @@
+name: byoml_custom
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - jupyter
+  - dill=0.3.3

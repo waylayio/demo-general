@@ -9,4 +9,5 @@ ${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_sklearn ${NB_DIR}/byoml/sklearnCusto
 ${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_tensorflow ${NB_DIR}/byoml/tensorflow.ipynb
 ${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_xgboost ${NB_DIR}/byoml/xgBoost.ipynb
 ${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_pytorch ${NB_DIR}/byoml/pyTorch.ipynb
+${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_custom ${NB_DIR}/byoml/simple_custom.ipynb
 # ${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_tensorflow ${NB_DIR}/python-sdk/general/retries.ipynb
