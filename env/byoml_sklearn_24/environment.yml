@@ -1,0 +1,9 @@
+name: byoml_sklearn_24
+channels:
+  - conda-forge
+dependencies:
+  - python=3.7
+  - seaborn
+  - pandas
+  - jupyter
+  - tenacity
