@@ -1,0 +1,6 @@
+waylay-beta>=0.3
+pandas
+matplotlib
+statsmodels
+waylay-beta[byoml-custom]
+byoml/custom_lib/sarima_byoml_wrapper
