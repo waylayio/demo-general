@@ -82,372 +82,436 @@ waylay_client.byoml.model.list_names()
 
 <table border="1" class="dataframe">
   <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th></th>
-      <th></th>
-      <th>method</th>
-      <th>url</th>
-      <th>description</th>
-    </tr>
+  <tr>
+    <th>service</th>
+    <th>resource</th>
+    <th>action</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
     <tr>
-      <th>service</th>
-      <th>resource</th>
-      <th>action</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="8" valign="top">analytics</th>
-      <th rowspan="7" valign="top">query</th>
-      <th>list</th>
-      <td>GET</td>
-      <td>/config/query</td>
-      <td>List or search <em>Query Configurations</em>.<br><a href="https://docs.waylay.io/api/query/search/#search" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/query/?id=data-query-search-api" target="_iodoc">iodoc</a></td>
-    </tr>
-    <tr>
-      <th>create</th>
-      <td>POST</td>
-      <td>/config/query</td>
-      <td>Create a new <em>Query Configuration</em>.<br><a href="https://docs.waylay.io/api/query/crud/#create" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/query/?id=create" target="_iodoc">iodoc</a></td>
-    </tr>
-    <tr>
-      <th>get</th>
-      <td>GET</td>
-      <td>/config/query/{}</td>
-      <td>Fetch the named <em>Query Configuration</em>.<br><a href="https://docs.waylay.io/api/query/crud/#retrieve" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/query/?id=retrieve" target="_iodoc">iodoc</a></td>
-    </tr>
-    <tr>
-      <th>remove</th>
-      <td>DELETE</td>
-      <td>/config/query/{}</td>
-      <td>Remove the named <em>Query Configuration</em>.<br><a href="https://docs.waylay.io/api/query/crud/#delete" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/query/?id=delete" target="_iodoc">iodoc</a></td>
-    </tr>
-    <tr>
-      <th>replace</th>
-      <td>PUT</td>
-      <td>/config/query/{}</td>
-      <td>Replace the named <em>Query Configuration</em>.<br><a href="https://docs.waylay.io/api/query/crud/#replace" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/query/?id=replace" target="_iodoc">iodoc</a></td>
-    </tr>
-    <tr>
-      <th>data</th>
-      <td>GET</td>
-      <td>/data/query/{}</td>
-      <td>Execute the timeseries query specified by the named <em>Query Configuration</em>.<br><a href="https://docs.waylay.io/api/query/data/#query-execution" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/query/?id=query-execution" target="_iodoc">iodoc</a></td>
-    </tr>
-    <tr>
-      <th>execute</th>
-      <td>POST</td>
-      <td>/data/query</td>
-      <td>Execute the timeseries query specified in the request body.<br><a href="https://docs.waylay.io/api/query/data/#query-execution" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/query/?id=query-execution" target="_iodoc">iodoc</a></td>
-    </tr>
-    <tr>
-      <th>about</th>
-      <th>version</th>
-      <td>GET</td>
-      <td>/</td>
-      <td>Version info of the <em>Analytics Service</em> at this endpoint.<br></td>
-    </tr>
-    <tr>
-      <th rowspan="12" valign="top">byoml</th>
+      <th rowspan="18" valign="top">byoml</th>
       <th rowspan="11" valign="top">model</th>
       <th>list</th>
-      <td>GET</td>
-      <td>/models</td>
-      <td>List the metadata of the deployed <em>BYOML Models</em><br><a href="https://docs.waylay.io/api/byoml/#overview-of-the-api" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/byoml/?id=overview-of-the-api" target="_iodoc">iodoc</a></td>
+      <td><div>List the metadata of the deployed <em>BYOML Models</em></div>
+<div><a href="https://docs.waylay.io/#/api/byoml/?id=overview-of-the-api" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>list_names</th>
-      <td>GET</td>
-      <td>/models</td>
-      <td>List the names of deployed <em>BYOML Models</em><br><a href="https://docs.waylay.io/api/byoml/#overview-of-the-api" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/byoml/?id=overview-of-the-api" target="_iodoc">iodoc</a></td>
+      <td><div>List the names of deployed <em>BYOML Models</em></div>
+<div><a href="https://docs.waylay.io/#/api/byoml/?id=overview-of-the-api" target="_doc">doc</a></div></td>
     </tr>
     <tr>
-      <th>create</th>
-      <td>POST</td>
-      <td>/models</td>
-      <td>Build and create a new <em>BYOML Model</em> as specified in the request<br><a href="https://docs.waylay.io/api/byoml/#how-to-upload-your-model" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/byoml/?id=how-to-upload-your-model" target="_iodoc">iodoc</a></td>
+      <th>upload</th>
+      <td><div>Upload a new machine learning model with given name, framework and description.</div>
+<div><a href="https://docs.waylay.io/#/api/byoml/?id=how-to-upload-your-model" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>replace</th>
-      <td>PUT</td>
-      <td>/models/{}</td>
-      <td>Build and replace the named <em>BYOML Model</em><br><a href="https://docs.waylay.io/api/byoml/#overwriting-a-model" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/byoml/?id=overwriting-a-model" target="_iodoc">iodoc</a></td>
+      <td><div>Replace a machine learning model with given name, framework and description.</div>
+<div><a href="https://docs.waylay.io/#/api/byoml/?id=overwriting-a-model" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>get</th>
-      <td>GET</td>
-      <td>/models/{}</td>
-      <td>Fetch the metadata of the named <em>BYOML Model</em><br><a href="https://docs.waylay.io/api/byoml/#checking-out-your-model" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/byoml/?id=checking-out-your-model" target="_iodoc">iodoc</a></td>
+      <td><div>Fetch the metadata of the named <em>BYOML Model</em></div>
+<div><a href="https://docs.waylay.io/#/api/byoml/?id=checking-out-your-model" target="_doc">doc</a></div></td>
     </tr>
     <tr>
-      <th>get_content</th>
-      <td>GET</td>
-      <td>/models/{}/content</td>
-      <td>Fetch the content of the named <em>BYOML Model</em><br><a href="https://docs.waylay.io/api/byoml/#checking-out-your-model" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/byoml/?id=checking-out-your-model" target="_iodoc">iodoc</a></td>
+      <th>update</th>
+      <td><div>Update the metadata of the named <em>BYOML Model</em>.
+Only metadata attributes can be modified.</div>
+<div><a href="https://docs.waylay.io/#/api/byoml/?id=update-metadata-for-a-model" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>examples</th>
-      <td>GET</td>
-      <td>/models/{}/examples</td>
-      <td>Fetch the <em>example request input</em> of the named <em>BYOML Model</em><br><a href="https://docs.waylay.io/api/byoml/#example-input" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/byoml/?id=example-input" target="_iodoc">iodoc</a></td>
+      <td><div>Fetch the <em>example request input</em> of the named <em>BYOML Model</em></div>
+<div><a href="https://docs.waylay.io/#/api/byoml/?id=example-input" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>predict</th>
-      <td>POST</td>
-      <td>/models/{}/predict</td>
-      <td>Execute the <em>predict</em> capability of the named <em>BYOML Model</em><br><a href="https://docs.waylay.io/api/byoml/#predictions" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/byoml/?id=predictions" target="_iodoc">iodoc</a></td>
+      <td><div>Execute the <em>predict</em> capability of the named <em>BYOML Model</em></div>
+<div><a href="https://docs.waylay.io/#/api/byoml/?id=predictions" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>regress</th>
-      <td>POST</td>
-      <td>/models/{}/regress</td>
-      <td>Execute the <em>regress</em> capability of the named  <em>BYOML Model</em><br><a href="https://docs.waylay.io/api/byoml/#predictions" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/byoml/?id=predictions" target="_iodoc">iodoc</a></td>
+      <td><div>Execute the <em>regress</em> capability of the named  <em>BYOML Model</em></div>
+<div><a href="https://docs.waylay.io/#/api/byoml/?id=predictions" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>classify</th>
-      <td>POST</td>
-      <td>/models/{}/classify</td>
-      <td>Execute the <em>classification</em> capability of the named <em>BYOML Model</em><br><a href="https://docs.waylay.io/api/byoml/#predictions" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/byoml/?id=predictions" target="_iodoc">iodoc</a></td>
+      <td><div>Execute the <em>classification</em> capability of the named <em>BYOML Model</em></div>
+<div><a href="https://docs.waylay.io/#/api/byoml/?id=predictions" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>remove</th>
-      <td>DELETE</td>
-      <td>/models/{}</td>
-      <td>Remove the named <em>BYOML Model</em><br><a href="https://docs.waylay.io/api/byoml/#deleting-a-model" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/byoml/?id=deleting-a-model" target="_iodoc">iodoc</a></td>
+      <td><div>Remove the named <em>BYOML Model</em></div>
+<div><a href="https://docs.waylay.io/#/api/byoml/?id=deleting-a-model" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>about</th>
       <th>health</th>
-      <td>GET</td>
-      <td>/</td>
-      <td>Get the health status of the <em>BYOML Service</em><br></td>
+      <td><div>Get the health status of the <em>BYOML Service</em></div></td>
     </tr>
     <tr>
-      <th rowspan="13" valign="top">api</th>
-      <th>settings</th>
-      <th>get</th>
-      <td>GET</td>
-      <td>/api/settings</td>
-      <td>Retrieve tenant global settings.<br></td>
+      <th rowspan="4" valign="top">framework</th>
+      <th>list</th>
+      <td><div>Frameworks and supported runtimes.</div>
+<div><a href="https://docs.waylay.io/#/api/byoml/?id=runtimes" target="_doc">doc</a></div></td>
     </tr>
     <tr>
-      <th rowspan="6" valign="top">resource</th>
       <th>get</th>
-      <td>GET</td>
-      <td>/api/resources/{}</td>
-      <td>Retrieve a `resource` representation.<br><a href="https://docs.waylay.io/api/resources/#retrieve-resource" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/resources/?id=retrieve-resource" target="_iodoc">iodoc</a></td>
+      <td><div>Get the default runtime for a framework.</div>
+<div><a href="https://docs.waylay.io/#/api/byoml/?id=runtimes" target="_doc">doc</a></div></td>
+    </tr>
+    <tr>
+      <th>list_versions</th>
+      <td><div>Get the runtimes for a framework.</div>
+<div><a href="https://docs.waylay.io/#/api/byoml/?id=runtimes" target="_doc">doc</a></div></td>
+    </tr>
+    <tr>
+      <th>get_version</th>
+      <td><div>Get the runtime for a given framework and framework version.</div>
+<div><a href="https://docs.waylay.io/#/api/byoml/?id=runtimes" target="_doc">doc</a></div></td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">runtime</th>
+      <th>list</th>
+      <td><div>List runtimes (framework and framework version).</div>
+<div><a href="https://docs.waylay.io/#/api/byoml/?id=runtimes" target="_doc">doc</a></div></td>
+    </tr>
+    <tr>
+      <th>get</th>
+      <td><div>Get a supported runtime.</div>
+<div><a href="https://docs.waylay.io/#/api/byoml/?id=runtimes" target="_doc">doc</a></div></td>
+    </tr>
+    <tr>
+      <th rowspan="11" valign="top">timeseries</th>
+      <th rowspan="11" valign="top">etl_tool</th>
+      <th>prepare_import</th>
+      <td><div>Convert an input data set to a locally stored timeseries file.</div></td>
+    </tr>
+    <tr>
+      <th>initiate_import</th>
+      <td><div>Upload a prepared timeseries file to the etl-import ingestion bucket.</div></td>
+    </tr>
+    <tr>
+      <th>list_import</th>
+      <td><div>List all imports in all states on the `etl-import` bucket.</div></td>
+    </tr>
+    <tr>
+      <th>check_import</th>
+      <td><div>Validate the status of an import process started by this tool.</div></td>
+    </tr>
+    <tr>
+      <th>cleanup_import</th>
+      <td><div>Clean up the server storage for an import task.</div></td>
+    </tr>
+    <tr>
+      <th>read_import_as_csv</th>
+      <td><div>Read an etl import file as a csv stream.</div></td>
+    </tr>
+    <tr>
+      <th>read_import_as_dataframe</th>
+      <td><div>Read an etl import file as pandas dataframe.</div></td>
+    </tr>
+    <tr>
+      <th>list_import_resources</th>
+      <td><div>List resource and metric metadata contained in an ETL import file.</div></td>
+    </tr>
+    <tr>
+      <th>update_resources</th>
+      <td><div>Create or update the Waylay Resources for the timeseries in this dataset.</div></td>
+    </tr>
+    <tr>
+      <th>export_series_as_csv</th>
+      <td><div>Export a number of series from the times series database.</div></td>
+    </tr>
+    <tr>
+      <th>update_query</th>
+      <td><div>Create or update a waylay query containing all the series defined in this import.</div></td>
+    </tr>
+    <tr>
+      <th rowspan="7" valign="top">queries</th>
+      <th rowspan="6" valign="top">query</th>
+      <th>list</th>
+      <td><div>List the names of stored queries. <br>Use filter like <code>params=dict(q="name:demo")</code> to filter the listing. <br>Use <code>select_path=["queries"]</code> to return the query entities rather than names. </div>
+<div><a href="https://docs.waylay.io/#/api/query/?id=data-query-search-api" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>create</th>
-      <td>POST</td>
-      <td>/api/resources</td>
-      <td>Create a `resource` entity.<br><a href="https://docs.waylay.io/api/resources/#create-resource" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/resources/?id=create-resource" target="_iodoc">iodoc</a></td>
+      <td><div>Store a new query definition under a name. Fails if a query already exist with that name.</div>
+<div><a href="https://docs.waylay.io/#/api/query/?id=create" target="_doc">doc</a></div></td>
     </tr>
     <tr>
-      <th>update</th>
-      <td>PATCH</td>
-      <td>/api/resources/{}</td>
-      <td>(Partially) update a `resource` representation.<br><a href="https://docs.waylay.io/api/resources/#partial-resource-update" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/resources/?id=partial-resource-update" target="_iodoc">iodoc</a></td>
-    </tr>
-    <tr>
-      <th>replace</th>
-      <td>PUT</td>
-      <td>/api/resources/{}</td>
-      <td>Replace a `resource` representation.<br><a href="https://docs.waylay.io/api/resources/#update-resource" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/resources/?id=update-resource" target="_iodoc">iodoc</a></td>
+      <th>get</th>
+      <td><div>Get the named query definition.</div>
+<div><a href="https://docs.waylay.io/#/api/query/?id=retrieve" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>remove</th>
-      <td>DELETE</td>
-      <td>/api/resources/{}</td>
-      <td>Delete a `resource` entity.<br><a href="https://docs.waylay.io/api/resources/#delete-resource" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/resources/?id=delete-resource" target="_iodoc">iodoc</a></td>
+      <td><div>Remove the named query definition.</div>
+<div><a href="https://docs.waylay.io/#/api/query/?id=delete" target="_doc">doc</a></div></td>
     </tr>
     <tr>
-      <th>search</th>
-      <td>GET</td>
-      <td>/api/resources</td>
-      <td>Query `resource` entities.<br><a href="https://docs.waylay.io/api/resources/#query-resources" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/resources/?id=query-resources" target="_iodoc">iodoc</a></td>
+      <th>replace</th>
+      <td><div>Create or replace the named query defition.</div>
+<div><a href="https://docs.waylay.io/#/api/query/?id=replace" target="_doc">doc</a></div></td>
+    </tr>
+    <tr>
+      <th>execute</th>
+      <td><div>Execute a timeseries query by name (string) or definition (object).</div>
+<div><a href="https://docs.waylay.io/#/api/query/?id=query-execution" target="_doc">doc</a></div></td>
+    </tr>
+    <tr>
+      <th>about</th>
+      <th>version</th>
+      <td><div>Version info of the <em>Queries Service</em> at this endpoint.</div></td>
+    </tr>
+    <tr>
+      <th rowspan="12" valign="top">resources</th>
+      <th rowspan="6" valign="top">resource</th>
+      <th>get</th>
+      <td><div>Retrieve a `resource` representation.</div>
+<div><a href="https://docs.waylay.io/#/api/resources/?id=retrieve-resource" target="_doc">doc</a></div></td>
+    </tr>
+    <tr>
+      <th>create</th>
+      <td><div>Create a `resource` entity.</div>
+<div><a href="https://docs.waylay.io/#/api/resources/?id=create-resource" target="_doc">doc</a></div></td>
+    </tr>
+    <tr>
+      <th>update</th>
+      <td><div>(Partially) update a `resource` representation.</div>
+<div><a href="https://docs.waylay.io/#/api/resources/?id=partial-resource-update" target="_doc">doc</a></div></td>
+    </tr>
+    <tr>
+      <th>replace</th>
+      <td><div>Replace a `resource` representation.</div>
+<div><a href="https://docs.waylay.io/#/api/resources/?id=update-resource" target="_doc">doc</a></div></td>
+    </tr>
+    <tr>
+      <th>remove</th>
+      <td><div>Delete a `resource` entity.</div>
+<div><a href="https://docs.waylay.io/#/api/resources/?id=delete-resource" target="_doc">doc</a></div></td>
+    </tr>
+    <tr>
+      <th>list</th>
+      <td><div>Query `resource` entities.</div>
+<div><a href="https://docs.waylay.io/#/api/resources/?id=query-resources" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th rowspan="6" valign="top">resource_type</th>
       <th>create</th>
-      <td>POST</td>
-      <td>/api/resourcetypes</td>
-      <td>Create a `resource type` entity.<br><a href="https://docs.waylay.io/api/resources/#create-resource-type" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/resources/?id=create-resource-type" target="_iodoc">iodoc</a></td>
+      <td><div>Create a `resource type` entity.</div>
+<div><a href="https://docs.waylay.io/#/api/resources/?id=create-resource-type" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>remove</th>
-      <td>DELETE</td>
-      <td>/api/resourcetypes/{}</td>
-      <td>Delete a `resource type` entity.<br><a href="https://docs.waylay.io/api/resources/#delete-resource-type" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/resources/?id=delete-resource-type" target="_iodoc">iodoc</a></td>
+      <td><div>Delete a `resource type` entity.</div>
+<div><a href="https://docs.waylay.io/#/api/resources/?id=delete-resource-type" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>replace</th>
-      <td>PUT</td>
-      <td>/api/resourcetypes/{}</td>
-      <td>Replace a `resource type` representation.<br><a href="https://docs.waylay.io/api/resources/#update-resource-type" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/resources/?id=update-resource-type" target="_iodoc">iodoc</a></td>
+      <td><div>Replace a `resource type` representation.</div>
+<div><a href="https://docs.waylay.io/#/api/resources/?id=update-resource-type" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>update</th>
-      <td>PATCH</td>
-      <td>/api/resourcetypes/{}</td>
-      <td>(Partially) update a `resource type` representation.<br><a href="https://docs.waylay.io/api/resources/#partial-resource-type-update" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/resources/?id=partial-resource-type-update" target="_iodoc">iodoc</a></td>
+      <td><div>(Partially) update a `resource type` representation.</div>
+<div><a href="https://docs.waylay.io/#/api/resources/?id=partial-resource-type-update" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>get</th>
-      <td>GET</td>
-      <td>/api/resourcetypes/{}</td>
-      <td>Retrieve a `resource type` representation.<br><a href="https://docs.waylay.io/api/resources/#retrieve-resource-type" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/resources/?id=retrieve-resource-type" target="_iodoc">iodoc</a></td>
+      <td><div>Retrieve a `resource type` representation.</div>
+<div><a href="https://docs.waylay.io/#/api/resources/?id=retrieve-resource-type" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>list</th>
-      <td>GET</td>
-      <td>/api/resourcetypes</td>
-      <td>Query `resource type` entities.<br><a href="https://docs.waylay.io/api/resources/#query-resource-types" target="_doc">doc</a> | <a href="https://docs-io.waylay.io/#/api/resources/?id=query-resource-types" target="_iodoc">iodoc</a></td>
+      <td><div>Query `resource type` entities.</div>
+<div><a href="https://docs.waylay.io/#/api/resources/?id=query-resource-types" target="_doc">doc</a></div></td>
     </tr>
     <tr>
-      <th rowspan="20" valign="top">storage</th>
+      <th rowspan="23" valign="top">storage</th>
       <th rowspan="2" valign="top">bucket</th>
       <th>list</th>
-      <td>GET</td>
-      <td>/bucket</td>
-      <td>List available bucket aliases<br><a href="https://docs-io.waylay.io/#/api/storage/?id=list-bucket" target="_iodoc">iodoc</a></td>
+      <td><div>List available bucket aliases</div>
+<div><a href="https://docs.waylay.io/#/api/storage/?id=list-bucket" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>get</th>
-      <td>GET</td>
-      <td>/bucket/{}</td>
-      <td>Get metadata for a specific bucket alias<br><a href="https://docs-io.waylay.io/#/api/storage/?id=get-bucket" target="_iodoc">iodoc</a></td>
+      <td><div>Get metadata for a specific bucket alias</div>
+<div><a href="https://docs.waylay.io/#/api/storage/?id=get-bucket" target="_doc">doc</a></div></td>
     </tr>
     <tr>
-      <th rowspan="6" valign="top">object</th>
+      <th rowspan="7" valign="top">object</th>
       <th>sign_get</th>
-      <td>GET</td>
-      <td>/bucket/{}/{}?sign=GET</td>
-      <td>Create a signed http GET link for the given bucket and object path.<br><a href="https://docs-io.waylay.io/#/api/storage/?id=sign_url" target="_iodoc">iodoc</a></td>
+      <td><div>Create a signed http GET link for the given bucket and object path.</div>
+<div><a href="https://docs.waylay.io/#/api/storage/?id=sign_url" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>sign_post</th>
-      <td>GET</td>
-      <td>/bucket/{}/{}?sign=POST</td>
-      <td>Create a signed http POST link for the given bucket and object path.<br><a href="https://docs-io.waylay.io/#/api/storage/?id=sign_url" target="_iodoc">iodoc</a></td>
+      <td><div>Create a signed http POST link for the given bucket and object path.</div>
+<div><a href="https://docs.waylay.io/#/api/storage/?id=sign_url" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>sign_put</th>
-      <td>GET</td>
-      <td>/bucket/{}/{}?sign=PUT</td>
-      <td>Create a signed http PUT link for the given bucket and object path.<br><a href="https://docs-io.waylay.io/#/api/storage/?id=sign_url" target="_iodoc">iodoc</a></td>
+      <td><div>Create a signed http PUT link for the given bucket and object path.</div>
+<div><a href="https://docs.waylay.io/#/api/storage/?id=sign_url" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>stat</th>
-      <td>GET</td>
-      <td>/bucket/{}/{}?stat=true</td>
-      <td>Get the object metadata for the given bucket and object path.<br><a href="https://docs-io.waylay.io/#/api/storage/?id=get-object" target="_iodoc">iodoc</a></td>
+      <td><div>Get the object metadata for the given bucket and object path.</div>
+<div><a href="https://docs.waylay.io/#/api/storage/?id=get-object" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>remove</th>
-      <td>DELETE</td>
-      <td>/bucket/{}/{}</td>
-      <td>Remove the object at the given bucket and object path.<br><a href="https://docs-io.waylay.io/#/api/storage/?id=delete-object-or-folder" target="_iodoc">iodoc</a></td>
+      <td><div>Remove the object at the given bucket and object path.</div>
+<div><a href="https://docs.waylay.io/#/api/storage/?id=delete-object-or-folder" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>list</th>
-      <td>GET</td>
-      <td>/bucket/{}/{}</td>
-      <td>List objects in given bucket with a given path prefix.<br><a href="https://docs-io.waylay.io/#/api/storage/?id=list-object" target="_iodoc">iodoc</a></td>
+      <td><div>List objects in given bucket with a given path prefix.</div>
+<div><a href="https://docs.waylay.io/#/api/storage/?id=list-object" target="_doc">doc</a></div></td>
+    </tr>
+    <tr>
+      <th>iter_list_all</th>
+      <td><div>Use paging to iterate over all objects.</div>
+<div><a href="https://docs.waylay.io/#/api/storage/?id=list-object" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th rowspan="4" valign="top">folder</th>
       <th>list</th>
-      <td>GET</td>
-      <td>/bucket/{}/{}/</td>
-      <td>List objects in this folder.<br><a href="https://docs-io.waylay.io/#/api/storage/?id=list-object" target="_iodoc">iodoc</a></td>
+      <td><div>List objects in this folder.</div>
+<div><a href="https://docs.waylay.io/#/api/storage/?id=list-object" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>create</th>
-      <td>PUT</td>
-      <td>/bucket/{}/{}/</td>
-      <td>Create a folder.<br><a href="https://docs-io.waylay.io/#/api/storage/?id=put-folder" target="_iodoc">iodoc</a></td>
+      <td><div>Create a folder.</div>
+<div><a href="https://docs.waylay.io/#/api/storage/?id=put-folder" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>stat</th>
-      <td>GET</td>
-      <td>/bucket/{}/{}/?stat=true</td>
-      <td>Get the details of this folder<br><a href="https://docs-io.waylay.io/#/api/storage/?id=get-object" target="_iodoc">iodoc</a></td>
+      <td><div>Get the details of this folder</div>
+<div><a href="https://docs.waylay.io/#/api/storage/?id=get-object" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>remove</th>
-      <td>DELETE</td>
-      <td>/bucket/{}/{}/</td>
-      <td>Remove this folder<br><a href="https://docs-io.waylay.io/#/api/storage/?id=delete-object-or-folder" target="_iodoc">iodoc</a></td>
+      <td><div>Remove this folder</div>
+<div><a href="https://docs.waylay.io/#/api/storage/?id=delete-object-or-folder" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th rowspan="6" valign="top">subscription</th>
       <th>list</th>
-      <td>GET</td>
-      <td>/subscription/{}</td>
-      <td>List available subscriptions for a given bucket.<br><a href="https://docs-io.waylay.io/#/api/storage/?id=list-bucket-subscriptions" target="_iodoc">iodoc</a></td>
+      <td><div>List available subscriptions for a given bucket.</div>
+<div><a href="https://docs.waylay.io/#/api/storage/?id=list-bucket-subscriptions" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>get</th>
-      <td>GET</td>
-      <td>/subscription/{}/{}</td>
-      <td>Retrieve the representation of a notification subscription.<br><a href="https://docs-io.waylay.io/#/api/storage/?id=get-subscription" target="_iodoc">iodoc</a></td>
+      <td><div>Retrieve the representation of a notification subscription.</div>
+<div><a href="https://docs.waylay.io/#/api/storage/?id=get-subscription" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>create</th>
-      <td>POST</td>
-      <td>/subscription/{}</td>
-      <td>Create a new notification subscription.<br><a href="https://docs-io.waylay.io/#/api/storage/?id=create-subscription" target="_iodoc">iodoc</a></td>
+      <td><div>Create a new notification subscription.</div>
+<div><a href="https://docs.waylay.io/#/api/storage/?id=create-subscription" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>replace</th>
-      <td>PUT</td>
-      <td>/subscription/{}/{}</td>
-      <td>Create or Replace the definition of a notification subscription.<br><a href="https://docs-io.waylay.io/#/api/storage/?id=update-subscription" target="_iodoc">iodoc</a></td>
+      <td><div>Create or Replace the definition of a notification subscription.</div>
+<div><a href="https://docs.waylay.io/#/api/storage/?id=update-subscription" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>remove</th>
-      <td>DELETE</td>
-      <td>/subscription/{}/{}</td>
-      <td>Remove a notification subscription.<br><a href="https://docs-io.waylay.io/#/api/storage/?id=delete-subscription" target="_iodoc">iodoc</a></td>
+      <td><div>Remove a notification subscription.</div>
+<div><a href="https://docs.waylay.io/#/api/storage/?id=delete-subscription" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>remove_all</th>
-      <td>DELETE</td>
-      <td>/subscription/{}</td>
-      <td>Remove all notification subscription that satisfy a query.<br><a href="https://docs-io.waylay.io/#/api/storage/?id=delete-subscriptions" target="_iodoc">iodoc</a></td>
+      <td><div>Remove all notification subscription that satisfy a query.</div>
+<div><a href="https://docs.waylay.io/#/api/storage/?id=delete-subscriptions" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">about</th>
       <th>version</th>
-      <td>GET</td>
-      <td>/</td>
-      <td>Application version<br><a href="https://docs-io.waylay.io/#/api/storage/?id=version" target="_iodoc">iodoc</a></td>
+      <td><div>Application version</div>
+<div><a href="https://docs.waylay.io/#/api/storage/?id=version" target="_doc">doc</a></div></td>
     </tr>
     <tr>
       <th>status</th>
-      <td>GET</td>
-      <td>/status</td>
-      <td>Validation and statistics on the buckets and policies for this tenant.<br><a href="https://docs-io.waylay.io/#/api/storage/?id=tenant-status" target="_iodoc">iodoc</a></td>
+      <td><div>Validation and statistics on the buckets and policies for this tenant.</div>
+<div><a href="https://docs.waylay.io/#/api/storage/?id=tenant-status" target="_doc">doc</a></div></td>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">etl</th>
-      <th rowspan="2" valign="top">etl_import</th>
-      <th>initiate</th>
-      <td>POST</td>
-      <td>/api/etl/import</td>
-      <td>Initiates an etl import process as specified in the request body.<br><a href="https://docs-io.waylay.io/#/features/etl/?id=etl-import-service" target="_iodoc">iodoc</a></td>
+      <th rowspan="2" valign="top">content</th>
+      <th>put</th>
+      <td><div>Retrieve the content of a storage object.</div></td>
     </tr>
     <tr>
       <th>get</th>
-      <td>GET</td>
-      <td>/api/etl/import</td>
-      <td>Retrieves the last or active etl import process.<br><a href="https://docs-io.waylay.io/#/features/etl/?id=etl-import-service" target="_iodoc">iodoc</a></td>
+      <td><div>Retrieve the content of a storage object.</div></td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">util</th>
+      <th rowspan="2" valign="top">info</th>
+      <th>action_info_df</th>
+      <td><div>Produce a pandas DataFrame with an overview of the provided actions.</div></td>
+    </tr>
+    <tr>
+      <th>action_info_html</th>
+      <td><div>Render the service/resource/action listing as an html table.</div></td>
+    </tr>
+    <tr>
+      <th>etl</th>
+      <th>etl_import</th>
+      <th>get</th>
+      <td><div>Retrieves the last or active etl import process.</div>
+<div><a href="https://docs.waylay.io/#/features/etl/?id=etl-import-service" target="_doc">doc</a></div></td>
+    </tr>
+    <tr>
+      <th rowspan="8" valign="top">data</th>
+      <th rowspan="5" valign="top">series</th>
+      <th>data</th>
+      <td><div>Retrieve the (optionally aggregated) data of a single series.</div>
+<div><a href="https://docs.waylay.io/#/api/broker/?id=getting-time-series-data" target="_doc">doc</a></div></td>
+    </tr>
+    <tr>
+      <th>list</th>
+      <td><div>Retrieve a list of series and their latest value for a given resource.</div>
+<div><a href="https://docs.waylay.io/#/api/broker/?id=metadata" target="_doc">doc</a></div></td>
+    </tr>
+    <tr>
+      <th>latest</th>
+      <td><div>Fetch the latest value for a series.</div>
+<div><a href="https://docs.waylay.io/#/api/broker/?id=latest-value-for-a-series" target="_doc">doc</a></div></td>
+    </tr>
+    <tr>
+      <th>query</th>
+      <td><div>Execute a broker query document to retrieve aggregated timeseries.</div>
+<div><a href="https://docs.waylay.io/#/api/broker/?id=post-timeseries-query" target="_doc">doc</a></div></td>
+    </tr>
+    <tr>
+      <th>export</th>
+      <td><div>Export a single series using paging with HAL links.</div>
+<div><a href="https://docs.waylay.io/#/api/broker/?id=getting-time-series-data" target="_doc">doc</a></div></td>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">events</th>
+      <th>post</th>
+      <td><div>Forward a json message to the rule engine, time series database and/or document store for a given resource.</div>
+<div><a href="https://docs.waylay.io/#/api/broker/?id=posting-data-to-the-storage-and-rule-engine" target="_doc">doc</a></div></td>
+    </tr>
+    <tr>
+      <th>bulk</th>
+      <td><div>Forward an array of json messages to the rule engine, time series database and/or document store.</div>
+<div><a href="https://docs.waylay.io/#/api/broker/?id=posting-array-of-data" target="_doc">doc</a></div></td>
+    </tr>
+    <tr>
+      <th>remove</th>
+      <td><div>Remove all data for a resource.</div>
+<div><a href="https://docs.waylay.io/#/api/broker/?id=all-data-for-a-resource" target="_doc">doc</a></div></td>
     </tr>
   </tbody>
 </table>
+
 

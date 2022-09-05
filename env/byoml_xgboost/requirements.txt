@@ -1,1 +1,1 @@
-waylay-beta
+waylay-beta[xgboost]>=0.5

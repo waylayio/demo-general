@@ -1,1 +1,1 @@
-waylay-beta[byoml-sklearn-0.24]
+waylay-beta[byoml-sklearn-0.24]>=0.5

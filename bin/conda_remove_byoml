@@ -2,7 +2,9 @@
 
 BIN_DIR=$(dirname $0)
 CONDA_ENV_DIR=${BIN_DIR}/../env
-${BIN_DIR}/conda_remove ${CONDA_ENV_DIR}/byoml_sklearn
+${BIN_DIR}/conda_remove ${CONDA_ENV_DIR}/byoml_sklearn_22
+${BIN_DIR}/conda_remove ${CONDA_ENV_DIR}/byoml_sklearn_24
 ${BIN_DIR}/conda_remove ${CONDA_ENV_DIR}/byoml_tensorflow
+${BIN_DIR}/conda_remove ${CONDA_ENV_DIR}/byoml_tensorflow24
 ${BIN_DIR}/conda_remove ${CONDA_ENV_DIR}/byoml_xgboost
 ${BIN_DIR}/conda_remove ${CONDA_ENV_DIR}/byoml_pytorch
