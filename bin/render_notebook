@@ -21,6 +21,7 @@ mkdir -p $HTML_OUT
 mkdir -p $MARKDOWN_OUT
 
 echo -e "\033[36m$NOTEBOOK\033[0m"
+echo papermill $NOTEBOOK $EXEC_OUT/$NOTEBOOK "${@:3}"
 papermill $NOTEBOOK $EXEC_OUT/$NOTEBOOK "${@:3}" || echo "failed rendering notebook ${NOTEBOOK}"
 jupyter nbconvert $EXEC_OUT/$NOTEBOOK --to html --output-dir $HTML_OUT
 jupyter nbconvert $EXEC_OUT/$NOTEBOOK --TagRemovePreprocessor.enabled=True --TagRemovePreprocessor.remove_cell_tags="['doc_exclude']"  --to markdown --output-dir $MARKDOWN_OUT

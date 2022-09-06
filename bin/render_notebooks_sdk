@@ -4,5 +4,10 @@ NB_DIR=$(dirname $0)/..
 BIN_DIR=${NB_DIR}/bin
 ENV_DIR=${NB_DIR}/env
 
+export PROFILE=render_notebook
+
 ${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_tensorflow ${NB_DIR}/python-sdk/general/retries.ipynb
+${BIN_DIR}/render_notebook ${ENV_DIR}/sdk_only ${NB_DIR}/python-sdk/query/Multivariate\ time\ series\ retrieval\ with\ Query\ Configurations.ipynb
+
+
 # TODO add other sdk notebooks ...
