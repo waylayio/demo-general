@@ -1,7 +1,6 @@
-name: byoml_custom
+name: sdk_only
 channels:
   - conda-forge
 dependencies:
-  - python=3.7
+  - python=3.9
   - jupyter
-  - dill=0.3.3

@@ -4,10 +4,19 @@ NB_DIR=$(dirname $0)/..
 BIN_DIR=${NB_DIR}/bin
 ENV_DIR=${NB_DIR}/env
 
-${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_sklearn_24 ${NB_DIR}/byoml/tutorial.ipynb
-${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_sklearn_24 ${NB_DIR}/byoml/sklearnCustom.ipynb
-${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_tensorflow ${NB_DIR}/byoml/tensorflow.ipynb
-${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_xgboost ${NB_DIR}/byoml/xgBoost.ipynb
-${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_pytorch ${NB_DIR}/byoml/pyTorch.ipynb
-${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_custom ${NB_DIR}/byoml/simple_custom.ipynb
-# ${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_tensorflow ${NB_DIR}/python-sdk/general/retries.ipynb
+PROFILE="${PROFILE:-render_notebook}"
+
+${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_sklearn_24 ${NB_DIR}/byoml/tutorial.ipynb -p PROFILE $PROFILE
+${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_sklearn_24 ${NB_DIR}/byoml/sklearnCustom.ipynb -p PROFILE $PROFILE
+${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_tensorflow24 ${NB_DIR}/byoml/tensorflow.ipynb -p PROFILE $PROFILE
+${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_xgboost ${NB_DIR}/byoml/xgBoost.ipynb -p PROFILE $PROFILE
+${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_pytorch ${NB_DIR}/byoml/pyTorch.ipynb -p PROFILE $PROFILE
+${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_custom ${NB_DIR}/byoml/simple_custom.ipynb -p PROFILE $PROFILE
+
+${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_sarima ${NB_DIR}/byoml/Sarima_as_custom.ipynb -p PROFILE $PROFILE
+${BIN_DIR}/render_notebook ${ENV_DIR}/byoml_sarima_with_lib \
+    ${NB_DIR}/byoml/Sarima_as_custom_with_lib.ipynb \
+    -p SARIMA_LIB ${NB_DIR}/byoml/custom_lib \
+    -p PROFILE $PROFILE
+
+

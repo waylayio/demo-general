@@ -1,6 +1,5 @@
-waylay-beta>=0.5
 pandas
 matplotlib
 statsmodels
-waylay-beta[byoml-custom]
+waylay-beta[byoml-custom]>=0.5
 byoml/custom_lib/sarima_byoml_wrapper
