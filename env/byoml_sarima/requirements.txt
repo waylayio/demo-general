@@ -1,0 +1,5 @@
+waylay-beta>=0.5
+pandas
+matplotlib
+statsmodels
+waylay-beta[byoml-custom]

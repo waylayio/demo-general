@@ -1,0 +1,9 @@
+name: byoml_tensorflow24
+channels:
+  - conda-forge
+dependencies:
+  - python=3.7
+  - pandas
+  - jupyter
+  - tenacity
+  - seaborn

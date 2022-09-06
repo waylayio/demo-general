@@ -1,1 +1,1 @@
-waylay-beta>=0.3
+waylay-beta[byoml-pytorch]>=0.5

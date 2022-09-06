@@ -1,0 +1,6 @@
+name: byoml_sarima_with_lib
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - jupyter
