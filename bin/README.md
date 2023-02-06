@@ -9,8 +9,8 @@ render notebooks to html and markdown in batch.
 
 Creates the conda environment with the given name. The files
 ```
-/env/<env-name>.environment.yml
-/env/<env-name>.requirement.txt 
+/env/<env-name>/environment.yml
+/env/<env-name>/requirement.txt 
 ```
 should exist.
 
