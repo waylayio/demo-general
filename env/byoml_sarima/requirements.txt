@@ -1,4 +1,4 @@
 pandas
 matplotlib
 statsmodels
-waylay-beta[byoml-custom]>=0.5
+waylay-beta[byoml-custom]>=0.6
