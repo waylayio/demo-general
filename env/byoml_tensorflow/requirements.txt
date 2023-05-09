@@ -1,4 +1,4 @@
 protobuf==3.20.*
 tensorflow<2.2
-waylay-beta[byoml-tensorflow-2.1]>=0.5
+waylay-beta[byoml-tensorflow-2.1]>=0.6
 
