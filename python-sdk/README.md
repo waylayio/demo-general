@@ -5,9 +5,9 @@ This section contains reference usage examples for the [Waylay Python SDK (beta)
 The main documentation can be found at the [Waylay Documentation Site](https://docs.waylay.io/api/sdk/python).
 
 The SDK currently supports Data Science activities as provided by the Waylay features
-* [BYOML](http://docs-io.waylay.io/#/features/byoml/)  (Machine Learning)
-* [Time Series Query](http://docs-io.waylay.io/#/features/query/) (definition of aggregated data sets)
-* [ETL](http://docs-io.waylay.io/#/features/etl/?id=etl-import-service) (Bulk import of timeseries data)
+* [BYOML](http://docs.waylay.io/#/features/byoml/)  (Machine Learning)
+* [Time Series Query](http://docs.waylay.io/#/features/query/) (definition of aggregated data sets)
+* [ETL](http://docs.waylay.io/#/features/etl/?id=etl-import-service) (Bulk import of timeseries data)
 
 This SDK is currently in beta. This implies that any subsequent version can introduce breaking changes.
 
