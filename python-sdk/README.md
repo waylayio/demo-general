@@ -14,7 +14,7 @@ This SDK is currently in beta. This implies that any subsequent version can intr
 # Installation
 
 The Waylay Python SDK is available as [waylay-beta in the PyPi library repository](https://pypi.org/project/waylay-beta/).
-Hence installation in a python environment (`3.6+`) just requires:
+Hence installation in a python environment (`3.7+`) just requires:
 
 ```
 pip install waylay-beta
@@ -36,7 +36,7 @@ git clone https://github.com/waylayio/demo-general.git waylay_demo
 cd waylay_demo
 
 # create and activate new conda environment
-conda create --name my_demo python=3.8
+conda create --name my_demo python=3.11
 conda activate my_demo
 
 # install the jupyter notebooks server package

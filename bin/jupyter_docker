@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+
+CONDA_ENV_DIR=${1:-env/$CONDA_ENV}
+CONDA_ENV=$(basename -- $CONDA_ENV_DIR)
+
+NOTEBOOK=$2
+BIN_DIR=$(dirname $0)
+
+docker build -t $CONDA_ENV --no-cache $CONDA_ENV_DIR
+docker run --rm -v$(pwd):/home -p 8888:8888 $CONDA_ENV
