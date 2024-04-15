@@ -2,7 +2,7 @@
 
 This section contains reference usage examples for the [Waylay Python SDK (beta)](https://pypi.org/project/waylay-beta/).
 
-The main documentation can be found at the [Waylay Documentation Site](https://docs.waylay.io/api/sdk/python).
+The main documentation can be found at the [Waylay Documentation Site](https://docs.waylay.io/api/sdk/python-waylay-beta).
 
 The SDK currently supports Data Science activities as provided by the Waylay features
 * [BYOML](http://docs-io.waylay.io/#/features/byoml/)  (Machine Learning)
