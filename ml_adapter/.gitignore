@@ -1,0 +1,8 @@
+*.tar.gz
+*.git.log
+.venv*/
+.mypy_cache/
+.pytest_cache/
+*.egg-info/
+__pycache__/
+**/tmp/*

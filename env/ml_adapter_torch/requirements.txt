@@ -1,0 +1,2 @@
+waylay-ml-adapter-torch
+waylay-ml-adapter-sdk
