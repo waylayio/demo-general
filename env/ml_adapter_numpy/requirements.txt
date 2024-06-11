@@ -1,0 +1,3 @@
+waylay-ml-adapter-numpy
+waylay-ml-adapter-sdk
+dill
