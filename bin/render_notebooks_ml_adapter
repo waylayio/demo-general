@@ -1,0 +1,10 @@
+#!/bin/bash
+
+NB_DIR=$(dirname $0)/../ml_adapter
+BIN_DIR=${NB_DIR}/bin
+ENV_DIR=${NB_DIR}/env
+
+PROFILE="${PROFILE:-render_notebook}"
+
+${BIN_DIR}/render_notebook ${ENV_DIR}/ml_adapter_sklearn ${NB_DIR}/torch_autoencoder/autoencoder.ipynb -p PROFILE $PROFILE
+${BIN_DIR}/render_notebook ${ENV_DIR}/ml_adapter_numpy  ${NB_DIR}/numpy/ml_adapter_demo.ipynb -p PROFILE $PROFILE
