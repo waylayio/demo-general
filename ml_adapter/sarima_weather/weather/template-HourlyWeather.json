@@ -1,0 +1,93 @@
+{
+  "sensors": [
+    {
+      "label": "checkOrCreateResource_1",
+      "name": "checkOrCreateResource",
+      "version": "1.0.1",
+      "properties": {
+        "metadata": "{\n  \"name\": $${variables.resourceName},\n  \"description\": \"Hourly updated weather data\"\n}",
+        "resourceId": "${task.RESOURCE}"
+      },
+      "position": [
+        522,
+        413
+      ],
+      "dataTrigger": false,
+      "tickTrigger": true,
+      "timeout": "PT50S"
+    },
+    {
+      "label": "getWeather",
+      "name": "GetWeatherAdjusted",
+      "version": "1.0.3",
+      "properties": {
+        "city": "${variables.location}",
+        "OPENWEATHER_KEY": "${vault.OPENWEATHER_KEY}"
+      },
+      "position": [
+        208,
+        295
+      ],
+      "dataTrigger": false,
+      "tickTrigger": true,
+      "timeout": "PT50S"
+    },
+    {
+      "label": "storeWeather",
+      "name": "storeMessage",
+      "version": "1.0.1",
+      "properties": {
+        "payload": "${nodes.getWeather.rawData}",
+        "resource": "${task.RESOURCE}"
+      },
+      "position": [
+        526,
+        247
+      ],
+      "dataTrigger": false,
+      "tickTrigger": true,
+      "timeout": "PT50S"
+    }
+  ],
+  "triggers": [
+    {
+      "sourceLabel": "getWeather",
+      "destinationLabel": "checkOrCreateResource_1",
+      "statesTrigger": [
+        "Collected"
+      ]
+    },
+    {
+      "sourceLabel": "getWeather",
+      "destinationLabel": "storeWeather",
+      "statesTrigger": [
+        "Collected"
+      ]
+    }
+  ],
+  "name": "HourlyWeather",
+  "user": "simon.schoonjans@waylay.io",
+  "createTime": 1664878243158,
+  "lastUpdateTime": 1664893628494,
+  "discoveryTemplate": false,
+  "variables": [
+    {
+      "name": "location",
+      "displayName": "location",
+      "type": "string",
+      "mandatory": true,
+      "defaultValue": "Ghent"
+    },
+    {
+      "name": "resourceName",
+      "displayName": "resourceName",
+      "type": "string",
+      "mandatory": true,
+      "defaultValue": "Hourly Weather Ghent"
+    }
+  ],
+  "taskDefaults": {
+    "type": "periodic",
+    "frequency": 3600000
+  }
+}

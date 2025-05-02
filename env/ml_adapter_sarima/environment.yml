@@ -1,0 +1,5 @@
+name: ml_adapter_sarima
+dependencies:
+  - python=3.11
+  - jupyter
+  - jedi-language-server

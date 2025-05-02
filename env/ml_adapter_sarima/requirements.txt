@@ -1,0 +1,8 @@
+waylay-ml-adapter-numpy
+waylay-ml-adapter-sdk
+# make sure all services are present
+waylay-sdk
+dill
+pandas
+matplotlib
+statsmodels

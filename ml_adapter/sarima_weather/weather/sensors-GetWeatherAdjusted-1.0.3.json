@@ -1,0 +1,109 @@
+{
+  "name": "GetWeatherAdjusted",
+  "version": "1.0.3",
+  "type": "sensor",
+  "script": "const axios = require('axios')\n\nconst { OPENWEATHER_KEY: API_KEY, city } = options.requiredProperties\n\nasync function execute () {\n  if (!API_KEY || !city) {\n    return send(new Error('Required properties missing'))\n  }\n\n  try {\n    const url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric' + '&appid=' + API_KEY\n    const response = await axios.get(url)\n    const { data } = response\n    if (data.cod && data.cod !== '200' && data.message) {\n      throw new Error(data.message)\n    }\n    const state = data.weather[0].main\n\n    const value = {\n      observedState: 'Collected',\n      rawData: {\n        temperature: data.main.temp,\n        temp_feel: data.main.feels_like,\n        pressure: data.main.pressure,\n        humidity: data.main.humidity,\n        wind_speed: data.wind.speed,\n        description: data.weather[0].description,\n        type: data.weather[0].main.toLowerCase()\n      }\n    }\n\n    send(null, value)\n  } catch (error) {\n    send(new Error('Failed to fetch current weather' + error))\n  }\n}\n\nexecute()\n\n",
+  "metadata": {
+    "tags": [],
+    "author": "Simon Schoonjans",
+    "description": "",
+    "category": "General",
+    "iconURL": "",
+    "configuration": [
+      {
+        "mandatory": true,
+        "type": "string",
+        "name": "city"
+      },
+      {
+        "mandatory": true,
+        "type": "string",
+        "name": "OPENWEATHER_KEY"
+      }
+    ],
+    "documentation": {
+      "input": [
+        {
+          "name": "city",
+          "dataType": "string",
+          "mandatory": true
+        },
+        {
+          "name": "OPENWEATHER_KEY",
+          "dataType": "string",
+          "mandatory": true
+        }
+      ],
+      "output": [
+        {
+          "name": "temperature"
+        },
+        {
+          "name": "temp_feel"
+        },
+        {
+          "name": "pressure"
+        },
+        {
+          "name": "humidity"
+        },
+        {
+          "name": "wind_speed"
+        },
+        {
+          "name": "description"
+        },
+        {
+          "name": "type"
+        }
+      ],
+      "states": [
+        {
+          "name": "Collected"
+        },
+        {
+          "name": "Not Collected"
+        }
+      ]
+    },
+    "requiredProperties": [
+      "city",
+      "OPENWEATHER_KEY"
+    ],
+    "rawData": [
+      {
+        "parameter": "temperature",
+        "dataType": "double"
+      },
+      {
+        "parameter": "temp_feel",
+        "dataType": "double"
+      },
+      {
+        "parameter": "pressure",
+        "dataType": "double"
+      },
+      {
+        "parameter": "humidity",
+        "dataType": "double"
+      },
+      {
+        "parameter": "wind_speed",
+        "dataType": "double"
+      },
+      {
+        "parameter": "description",
+        "dataType": "string"
+      },
+      {
+        "parameter": "type",
+        "dataType": "string"
+      }
+    ],
+    "supportedStates": [
+      "Collected",
+      "Not Collected"
+    ]
+  },
+  "dependencies": {}
+}
